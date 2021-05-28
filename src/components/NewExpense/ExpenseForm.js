@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Swal from 'sweetalert2'
 import './ExpenseForm.css';
 
 const ExpenseForm = (props) => {
@@ -52,6 +52,13 @@ const ExpenseForm = (props) => {
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Expense added successfully.',
+      showConfirmButton: false,
+      timer: 2000
+    })
   };
 
   return (
